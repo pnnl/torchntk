@@ -1,1 +1,1 @@
-# easy_ntk
+# torchntk
