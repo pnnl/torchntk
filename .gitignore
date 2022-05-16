@@ -1,0 +1,5 @@
+./DATA/
+./images/
+./easyntk/__pycache__/
+./easyntk/autograd/__pycache__/
+./easyntk/explicit/__pycache__/
