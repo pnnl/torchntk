@@ -151,3 +151,4 @@ I've also included some utility functions that I directly copied from the PyTorc
 * Add explicit calculations for more varied architectures
 * Parallelize computation across multiple GPUs
 * make that notebook that demonstrates the different algorithms into a test such that pytest ccould be run on it, assert all outputs are ~same
+
