@@ -146,6 +146,8 @@ Some backward propogation functions were originally copied then heavily modified
 
 I've also included some utility functions that I directly copied from the PyTorch source; therefore, their license clause is included in ours.
 
+Experimental autograd operations were adapted from web pages in the pre-release of Pytorch1.11; but now with Pytorch 1.11 release I advise you take a look at functorch's [NTK page](https://pytorch.org/functorch/stable/notebooks/neural_tangent_kernels.html). 
+
 ### Software TODO (or how you can contribute)
 
 * Add explicit calculations for more varied architectures
