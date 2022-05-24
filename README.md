@@ -7,7 +7,7 @@
 * git clone this repository
 
 ```bash
-git clone https://stash.pnnl.gov/scm/~enge625/easy_ntk.git
+git clone https://github.com/pnnl/torchntk
 ```
 
 * Add to PYTHONPATH
