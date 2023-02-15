@@ -38,7 +38,7 @@ model.to(DEVICE)
 
 Y = model(X) 
 
-NTK_components = easyntk.autograd.autograd_components_ntk(model,Y)
+NTK_components = torchntk.autograd.autograd_components_ntk(model,Y)
 ```
 
 or, a generally faster implementation exists if torch.vmap exists (currently available in pytorch nightly builds only)
@@ -56,7 +56,7 @@ model.to(DEVICE)
 
 xloader = DataLoader(TensorDataset(My_data,My_targets),batch_size=64, shuffle=False)
 
-NTK_components = easyntk.autograd.vmap_ntk_loader(model,xloader)
+NTK_components = torchntk.autograd.vmap_ntk_loader(model,xloader)
 ```
 
 Finally, if you are using a fully connected network (a network composed only if torch.nn.Linear layers) you can use this last method which is typically much faster:
