@@ -2,6 +2,8 @@
 
 #### An Arbitrary** PyTorch Architecture Neural Tangent Kernel Library
 
+This code was developed to bridge a gap in NTK computation before the release Pytorch1.11; but now with Pytorch 1.11 release I advise you take a look at functorch's [NTK page](https://pytorch.org/functorch/stable/notebooks/neural_tangent_kernels.html), which generally will have better development + improvements than this repo. *In other words, we do not expect to support this repo moving forward.*
+
 ### Installation
 
 * git clone this repository
@@ -59,7 +61,7 @@ xloader = DataLoader(TensorDataset(My_data,My_targets),batch_size=64, shuffle=Fa
 NTK_components = torchntk.autograd.vmap_ntk_loader(model,xloader)
 ```
 
-Finally, if you are using a fully connected network (a network composed only if torch.nn.Linear layers) you can use this last method which is typically much faster:
+Finally, if you are using a fully connected network (a network composed only of torch.nn.Linear layers) you can use this last method which is typically much faster:
 
 ```python
 import torchntk
@@ -127,7 +129,7 @@ components = torchntk.explicit.explicit_ntk(**config)
 
 ### Logging with Tensorboard
 
-Tutorial coming soon. In the meantime, you can check the tensorboard.ipynb notebook.
+check the tensorboard.ipynb notebook.
 
 Once installed, Tensorboard can be started on the command line with:
 ```bash
@@ -152,5 +154,5 @@ Experimental autograd operations were adapted from web pages in the pre-release 
 
 * Add explicit calculations for more varied architectures
 * Parallelize computation across multiple GPUs
-* make that notebook that demonstrates the different algorithms into a test such that pytest ccould be run on it, assert all outputs are ~same
+* make the notebook that demonstrates the different algorithms into a test such that pytest can be run on it, assert all outputs are ~same
 
